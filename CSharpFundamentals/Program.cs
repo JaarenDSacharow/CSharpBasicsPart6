@@ -22,7 +22,7 @@ namespace CSharpFundamentals
             {
                 var min = GetSmallest(list);
                 smallests.Add(min);
-                list.Remove(min);
+                list.Remove(min); //remove the most recent min from the list so the loop won't continue forever
             }
 
             return smallests;
@@ -31,7 +31,7 @@ namespace CSharpFundamentals
         public static int GetSmallest(List<int> list)
         {
             // Assume the first number is the smallest
-            var min = list[0];
+            var min = list[0]; //each time this loop starts it will be with one less element
             for (var i = 1; i < list.Count; i++)
             {
                 if (list[i] > min)
